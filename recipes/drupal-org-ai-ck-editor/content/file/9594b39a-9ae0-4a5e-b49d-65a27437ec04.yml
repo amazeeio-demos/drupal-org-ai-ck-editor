@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9594b39a-9ae0-4a5e-b49d-65a27437ec04
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: ai-assistant-dropdown.png
+  uri:
+    -
+      value: 'public://2025-03/ai-assistant-dropdown.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 26958
+  status:
+    -
+      value: true

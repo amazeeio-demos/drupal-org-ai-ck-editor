@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f7ed8bf0-92eb-4fba-b6f0-8191b63e772a
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: the-assessment-review-olsen-patel-1024x510.jpg
+  uri:
+    -
+      value: 'public://inline-images/the-assessment-review-olsen-patel-1024x510.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 13218
+  status:
+    -
+      value: true

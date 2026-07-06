@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1988e25f-08d9-4216-8ca8-9ab47e5c85ba
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: select-summarize-text.png
+  uri:
+    -
+      value: 'public://2025-03/select-summarize-text.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 27529
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 64b8bc8c-7933-4ac5-b9f7-88a36ca89822
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: generate-summary.png
+  uri:
+    -
+      value: 'public://2025-03/generate-summary.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 69803
+  status:
+    -
+      value: true

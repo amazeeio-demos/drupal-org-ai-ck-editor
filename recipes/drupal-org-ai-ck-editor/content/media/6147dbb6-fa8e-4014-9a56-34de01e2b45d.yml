@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 6147dbb6-fa8e-4014-9a56-34de01e2b45d
+  bundle: image
+  default_langcode: en
+  depends:
+    1988e25f-08d9-4216-8ca8-9ab47e5c85ba: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: select-summarize-text.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: select-summarize-text
+      title: ''
+      width: 541
+      height: 141
+      entity: 1988e25f-08d9-4216-8ca8-9ab47e5c85ba

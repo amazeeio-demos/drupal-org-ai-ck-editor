@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 56201bfe-95ba-4297-ade7-29873a778444
+  bundle: image
+  default_langcode: en
+  depends:
+    9594b39a-9ae0-4a5e-b49d-65a27437ec04: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: ai-assistant-dropdown.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: ai-assistant-dropdown
+      title: ''
+      width: 541
+      height: 140
+      entity: 9594b39a-9ae0-4a5e-b49d-65a27437ec04

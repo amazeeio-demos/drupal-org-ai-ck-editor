@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: a9145139-9a04-45e0-9ef2-83d8aa9a57e8
+  bundle: image
+  default_langcode: en
+  depends:
+    f086c206-5dfe-45bd-82c0-071069ef51d7: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: select-style-guide.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: select-style-guide
+      title: ''
+      width: 546
+      height: 138
+      entity: f086c206-5dfe-45bd-82c0-071069ef51d7

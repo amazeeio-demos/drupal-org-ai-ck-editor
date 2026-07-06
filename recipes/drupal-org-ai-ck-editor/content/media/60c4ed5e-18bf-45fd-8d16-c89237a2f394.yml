@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 60c4ed5e-18bf-45fd-8d16-c89237a2f394
+  bundle: image
+  default_langcode: en
+  depends:
+    a3eab440-27df-4539-b6a9-a830fe471fc9: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: review-summarized-text.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: review-summarized-text
+      title: ''
+      width: 713
+      height: 597
+      entity: a3eab440-27df-4539-b6a9-a830fe471fc9

@@ -1,0 +1,56 @@
+name: 'amazee.ai - Try AI CKEditor Widgets with DrupalAI'
+type: Site
+description: Drupal CMS (starter) plus the amazee.ai CKEditor widgets demo — AI assistant tools (summarize, style guide, image alt text) built into the editor.
+recipes:
+  - drupal_cms_starter
+  - amazeeio_ckeditor_widgets
+config:
+  strict: false
+  actions:
+    ai.settings:
+      simpleConfigUpdate:
+        default_providers:
+          chat:
+            provider_id: amazeeio
+            model_id: chat
+          chat_with_complex_json:
+            provider_id: amazeeio
+            model_id: chat_with_complex_json
+          chat_with_image_vision:
+            provider_id: amazeeio
+            model_id: chat_with_image_vision
+          embeddings:
+            provider_id: amazeeio
+            model_id: embeddings
+    editor.editor.content_format:
+      simpleConfigUpdate:
+        settings.toolbar.items:
+          - heading
+          - bold
+          - italic
+          - strikethrough
+          - blockQuote
+          - link
+          - bulletedList
+          - numberedList
+          - indent
+          - outdent
+          - alignment
+          - insertTable
+          - drupalMedia
+          - undo
+          - redo
+          - removeFormat
+          - sourceEditing
+    filter.format.content_format:
+      simpleConfigUpdate:
+        filters.filter_html.settings.allowed_html: '<br> <p class="text-align-left text-align-center text-align-right text-align-justify"> <h2 class="text-align-left text-align-center text-align-right text-align-justify"> <h3 class="text-align-left text-align-center text-align-right text-align-justify"> <h4 class="text-align-left text-align-center text-align-right text-align-justify"> <h5 class="text-align-left text-align-center text-align-right text-align-justify"> <h6 class="text-align-left text-align-center text-align-right text-align-justify"> <strong> <em> <s> <blockquote> <a href data-entity-type data-entity-uuid data-entity-substitution> <ul> <ol reversed start> <li> <table> <tr> <td rowspan colspan> <th rowspan colspan> <thead> <tbody> <tfoot> <caption> <drupal-media data-entity-type data-entity-uuid alt data-view-mode data-caption data-align>'
+    field.field.node.page.field_content:
+      simpleConfigUpdate:
+        settings.allowed_formats:
+          - content_format
+          - content_with_ai
+    system.site:
+      simpleConfigUpdate:
+        page:
+          front: /instructions
