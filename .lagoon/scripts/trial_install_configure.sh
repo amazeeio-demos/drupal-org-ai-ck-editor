@@ -20,6 +20,14 @@ else
     --input=ai_provider_amazeeio_recipe.llm_host=$AI_LLM_API_URL \
     --input=ai_provider_amazeeio_recipe.llm_api_key=$AI_LLM_API_TOKEN
 
+  # Demos don't self-update; remove the Update Manager stack so admins don't
+  # see "out of date" warnings. Per-module + `|| true` handles both the CMS
+  # demos (all three present) and search (only `update`).
+  echo "Uninstalling update-manager modules"
+  for module in automatic_updates update package_manager; do
+    drush -y pm:uninstall "$module" || true
+  done
+
   # Clear the cache
   echo "Rebuilding of the Drupal cache"
   drush cr
