@@ -81,6 +81,10 @@
             ]
         },
         "composer-exit-on-patch-failure": true,
-        "patches": {}
+        "patches": {
+            "drupal/mercury": {
+                "Image component: render at natural size instead of upscale+crop to aspect box": "patches/mercury-image-natural-size.patch"
+            }
+        }
     }
 }

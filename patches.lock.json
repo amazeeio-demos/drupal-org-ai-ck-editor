@@ -1,4 +1,17 @@
 {
-    "_hash": "6142bfcb78f54dfbf5247ae5e463f25bdb8fff1890806e2e45aa81a59c211653",
-    "patches": []
+    "_hash": "1ffbb260cfbffa0dfeb74695dc377b5b592641b3ae08b824da649a8aee7d5568",
+    "patches": {
+        "drupal/mercury": [
+            {
+                "package": "drupal/mercury",
+                "description": "Image component: render at natural size instead of upscale+crop to aspect box",
+                "url": "patches/mercury-image-natural-size.patch",
+                "sha256": "41e78b6407758c2da93f9896e8294f18997d8ab6b5b85033bbf78293fbf6d20a",
+                "depth": 1,
+                "extra": {
+                    "provenance": "root"
+                }
+            }
+        ]
+    }
 }
