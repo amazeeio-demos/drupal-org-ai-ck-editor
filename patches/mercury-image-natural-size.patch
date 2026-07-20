@@ -1,0 +1,45 @@
+--- a/components/image/image.twig
++++ b/components/image/image.twig
+@@ -3,15 +3,8 @@
+ 
+ {% set image_container =
+   html_cva(
+-    base: 'cq-full w-full',
++    base: 'cq-full w-fit max-w-full',
+     variants: {
+-      size: {
+-        '2:1': 'aspect-2/1',
+-        '16:9': 'aspect-16/9',
+-        '3:2': 'aspect-3/2',
+-        '4:3': 'aspect-4/3',
+-        '1:1': 'aspect-1/1'
+-      },
+       hasRadius: {
+         yes: 'overflow-hidden',
+         no: 'rounded-none'
+@@ -27,7 +20,6 @@
+ 
+ {% set container_classes =
+   image_container.apply({
+-    size: size,
+     hasRadius: has_radius,
+     radius: radius
+   })
+@@ -41,7 +33,7 @@
+           {% include 'canvas:image' ignore missing with {
+             src: media.src,
+             alt: media.alt,
+-            class: 'object-cover w-full h-full group-hover:scale-105 duration-300',
++            class: 'max-w-full h-auto group-hover:scale-105 duration-300',
+             width: media.width,
+             height: media.height,
+             loading: 'eager'
+@@ -51,7 +43,7 @@
+         {% include 'canvas:image' ignore missing with {
+           src: media.src,
+           alt: media.alt,
+-          class: 'object-cover w-full h-full',
++          class: 'max-w-full h-auto',
+           width: media.width,
+           height: media.height
+         } only %}
