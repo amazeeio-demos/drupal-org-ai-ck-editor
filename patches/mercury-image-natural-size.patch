@@ -5,7 +5,7 @@
  {% set image_container =
    html_cva(
 -    base: 'cq-full w-full',
-+    base: 'cq-full w-fit max-w-full',
++    base: 'w-fit max-w-full mx-auto',
      variants: {
 -      size: {
 -        '2:1': 'aspect-2/1',
