@@ -48,7 +48,6 @@ config:
     field.field.node.page.field_content:
       simpleConfigUpdate:
         settings.allowed_formats:
-          - content_format
           - content_with_ai
     system.site:
       simpleConfigUpdate:
