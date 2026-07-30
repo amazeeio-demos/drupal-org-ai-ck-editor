@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: ac7d413a-1917-4b7b-be30-b4059674dd58
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: viewed-image-alt-text.png
+  uri:
+    -
+      value: 'public://2025-03/viewed-image-alt-text.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 78940
+  status:
+    -
+      value: true

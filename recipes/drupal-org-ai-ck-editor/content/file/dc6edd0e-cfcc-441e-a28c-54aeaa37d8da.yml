@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: dc6edd0e-cfcc-441e-a28c-54aeaa37d8da
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: add-an-image.png
+  uri:
+    -
+      value: 'public://2025-03/add-an-image.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 7687
+  status:
+    -
+      value: true

@@ -1,0 +1,9 @@
+{
+    "name": "amazeeio-demos/drupal-org-ai-ck-editor",
+    "description": "Site template for the drupal.org/ai CKEditor demo.",
+    "require": {
+        "drupal/ai_provider_amazeeio_recipe": "*",
+        "drupal/amazeeio_ckeditor_widgets": "*"
+    },
+    "type": "drupal-recipe"
+}

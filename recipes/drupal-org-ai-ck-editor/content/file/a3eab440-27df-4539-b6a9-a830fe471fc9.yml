@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: a3eab440-27df-4539-b6a9-a830fe471fc9
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: review-summarized-text.png
+  uri:
+    -
+      value: 'public://2025-03/review-summarized-text.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 99248
+  status:
+    -
+      value: true

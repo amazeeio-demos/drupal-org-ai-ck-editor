@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: e1e74487-72b4-4cc2-adf3-25a8fb51e46d
+  bundle: image
+  default_langcode: en
+  depends:
+    8ee16bec-3be1-471b-9ebc-2d148df86b4e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: the-assessment-review-olsen-patel-1024x510.jpg
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: 'The Assessment'
+      title: ''
+      width: 1024
+      height: 510
+      entity: 8ee16bec-3be1-471b-9ebc-2d148df86b4e

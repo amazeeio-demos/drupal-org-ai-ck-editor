@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: f086c206-5dfe-45bd-82c0-071069ef51d7
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: select-style-guide.png
+  uri:
+    -
+      value: 'public://2025-03/select-style-guide.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 24198
+  status:
+    -
+      value: true

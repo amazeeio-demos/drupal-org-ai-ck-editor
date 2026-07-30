@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 1e4586d3-61db-4d74-a22b-99dc8b06e024
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: Untitled.png
+  uri:
+    -
+      value: 'public://2025-03/Untitled.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 18006
+  status:
+    -
+      value: true

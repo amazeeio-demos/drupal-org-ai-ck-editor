@@ -1,63 +1,25 @@
-# Lagoon Drupal CMS example
+# Drupal AI Demo: CKEditor Widgets
 
-## Overview
+A [Drupal CMS](https://www.drupal.org/project/cms) 2.x demo on [Lagoon](https://lagoon.sh) showing AI assistant tools built right into CKEditor with [amazee.ai](https://amazee.ai): summarize text, rewrite to a style guide, and generate image alt text via [AI Automators](https://www.drupal.org/project/ai) and [amazee.ai CKEditor Widgets](https://www.drupal.org/project/amazeeio_ckeditor_widgets).
 
-This is an example project demonstrating how to set up a Drupal CMS based environment on Lagoon.
+## How it's built
 
-When running on a Lagoon instance, the first time that the project starts up, it will attempt to install Drupal-CMS - see the `.lagoon.yml` file for how this is achieved using a post rollout task.
+The whole site is defined by the bundled recipe at `recipes/drupal-org-ai-ck-editor/` — Drupal CMS starter plus the `amazeeio_ckeditor_widgets` recipe (the `Content with AI` text format, AI assistant automator chains) and demo content as YAML. `drush site:install <recipe>` produces the complete demo from a clean database.
 
-The `./.lagoon/scripts/scaffold.sh` script plays a key role in setting up the project, ensuring necessary dependencies and configurations are applied when running locally versus within Lagoon. See the file and the Dockerfile to see how this is achieved.
+amazee.ai credentials are never in the repo. They're injected per environment from `AI_LLM_API_*` env vars — by `.lagoon/scripts/trial_install_configure.sh` (fresh install) or `.lagoon/scripts/polydock_post_deploy.sh` (Polydock trial restore).
 
-## Local Development
-
-### How to Run Locally
-
-To set up and run the project locally, execute the following commands:
+## Local development
 
 ```sh
+cp .env.example .env   # fill in your amazee.ai credentials
 docker compose build
 docker compose up -d
 docker compose exec cli bash -c 'wait-for mariadb:3306'
-docker compose exec cli bash -c 'drush -y si && drush -y cr'
+docker compose exec cli bash -c 'drush -n si /app/recipes/drupal-org-ai-ck-editor && drush -y cr'
 ```
 
-These commands will:
+Then apply the provider recipe with your credentials (or run `.lagoon/scripts/trial_install_configure.sh` inside the cli container with the env vars set).
 
-1. Build the necessary Docker containers.
-2. Start the containers in detached mode.
-3. Wait for the MariaDB service to become available.
-4. Install Drupal and rebuild the cache using Drush.
+## Lagoon / Polydock
 
-### Using the Project Browser to install modules (Only Usable When Running Locally)
-
-The Project Browser can be used to install modules through the UI when running locally. To do so:
-
-1. Visit `/admin/modules/browse/drupalorg_jsonapi`.
-2. Install a module using the UI.
-3. This will update the `composer.json` and `composer.lock` files.
-4. Commit these changes to the repository and push them up.
-5. The module will still need to be enabled on the live site, but the composer packages will have been updated correctly.
-
-
-
-## Technical Details
-
-### `scaffold.sh` Script: Scaffolding Mechanism
-
-The `scaffold.sh` script is responsible for initializing the Drupal project in both local and Lagoon environments. It primarily:
-
-- Installs dependencies when running locally.
-- Ensures required configurations and files are in place.
-- Prevents reinstallation if scaffolding has already been completed.
-
-#### Summary of Execution
-
-- The script checks for the presence of `/app/scaffolding_done.flag`. If found, it skips execution.
-- When running **locally**, it installs dependencies using `composer install --no-dev` and copies necessary configuration assets.
-- When running **inside Lagoon**, it ensures required setup files exist but skips dependency installation.
-- It is executed as part of the container's entrypoints, as defined in the Dockerfile.
-
-### Disabling Project Browser Auto-Installation in Lagoon
-
-To ensure a smooth setup in cloud environments, auto-installation of the Project Browser has been disabled when running in Lagoon. This prevents conflicts and ensures proper configuration management.
-
+On first deploy of a trial environment, `polydock_post_deploy.sh` fetches and restores the pre-built `app-data-image.tgz` (fast spin-up), then wires AI credentials from env vars. `create_polydock_app_image.sh` regenerates that image from a verified build — the recipe in git is the source of truth; the image is a build artifact.

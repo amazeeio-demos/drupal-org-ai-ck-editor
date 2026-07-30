@@ -1,0 +1,32 @@
+_meta:
+  version: '1.0'
+  entity_type: media
+  uuid: 867208ff-7d80-4f14-9558-9e9d1382d8d6
+  bundle: image
+  default_langcode: en
+  depends:
+    50d4df97-e784-46ee-bcea-db94c71b4e2e: file
+default:
+  status:
+    -
+      value: true
+  uid:
+    -
+      target_id: 1
+  name:
+    -
+      value: image-alt-text-generator.png
+  revision_translation_affected:
+    -
+      value: true
+  path:
+    -
+      langcode: en
+      alias: null
+  field_media_image:
+    -
+      alt: image-alt-text-generator
+      title: ''
+      width: 832
+      height: 586
+      entity: 50d4df97-e784-46ee-bcea-db94c71b4e2e

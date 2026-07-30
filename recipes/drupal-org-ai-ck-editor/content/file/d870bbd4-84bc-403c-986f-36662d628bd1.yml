@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: d870bbd4-84bc-403c-986f-36662d628bd1
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: parasite.jpg
+  uri:
+    -
+      value: 'public://inline-images/parasite.jpg'
+  filemime:
+    -
+      value: image/jpeg
+  filesize:
+    -
+      value: 52535
+  status:
+    -
+      value: true

@@ -1,0 +1,24 @@
+_meta:
+  version: '1.0'
+  entity_type: file
+  uuid: 9d3af574-9c72-4a07-a29d-357574972970
+  default_langcode: en
+default:
+  uid:
+    -
+      target_id: 1
+  filename:
+    -
+      value: generated-image-alt-text.png
+  uri:
+    -
+      value: 'public://2025-03/generated-image-alt-text.png'
+  filemime:
+    -
+      value: image/png
+  filesize:
+    -
+      value: 420391
+  status:
+    -
+      value: true
